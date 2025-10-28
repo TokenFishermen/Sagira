@@ -115,6 +115,21 @@
 4. Add production-ready logging
 5. Create user documentation
 
+## CI/CD Infrastructure (2025-10-28)
+
+- Established continuous integration pipeline using GitHub Actions
+  - Automated pytest runs on every push to main branch
+  - Uses Ubuntu latest and Python 3.10
+  - Ensures consistent testing environment across development machines
+- Enhanced dependency management
+  - Added `requirements-lock.txt` with complete dependency tree
+  - Enables perfectly reproducible environments
+  - Helps prevent "it works on my machine" issues
+- Next improvement areas:
+  - Consider adding code coverage reporting
+  - Add linting checks (pylint/flake8)
+  - Set up automated dependency updates
+
 ## Recent housekeeping & verification (2025-10-28)
 
 - Installed missing NLP packages into the project virtualenv: `textblob` and `nltk`.
