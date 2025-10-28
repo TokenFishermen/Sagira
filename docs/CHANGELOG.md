@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- 2025-10-28: Maintenance / CI setup
+
+### Added
+
+- Added `requirements-lock.txt` to pin full dependency tree for reproducible installs.
+- Created GitHub Actions workflow `.github/workflows/ci.yml` to run tests on push/PR to `main`.
+- Enhanced CI to include linting (flake8) and test coverage collection (pytest-cov). Coverage XML is uploaded as an artifact.
+- Updated `docs/RECAP.md` with a summary of housekeeping, CI, and dependency management improvements.
+
 ## [0.2.0] - 2025-10-27
 
 ### Added
