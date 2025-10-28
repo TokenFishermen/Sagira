@@ -126,6 +126,8 @@
   - Removed several root-level duplicate test scripts that are now consolidated under `tests/`.
 - Verified the environment and ran the full pytest suite in the project's venv: all tests passed (16 passed, 0 failed).
 - Updated `requirements.txt` to pin the installed NLP dependencies for reproducibility.
+- Generated `requirements-lock.txt` with complete dependency tree and exact versions.
+- Added GitHub Actions CI workflow to run pytest on every push to main branch.
 
 Notes:
 
