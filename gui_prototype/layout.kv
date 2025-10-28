@@ -1,0 +1,47 @@
+#:kivy 2.0.0
+
+<SagiraGUI>:
+    canvas.before:
+        Color:
+            rgba: 0.1, 0.1, 0.2, 1  # Dark gothic background
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(10)
+        spacing: dp(10)
+
+        ScrollView:
+            size_hint: 1, 0.8
+            BoxLayout:
+                id: chat_history
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+
+        BoxLayout:
+            size_hint: 1, 0.2
+            spacing: dp(10)
+
+            TextInput:
+                id: text_input
+                hint_text: 'Type your message...'
+                multiline: False
+                size_hint: 0.8, 1
+                background_color: 0.2, 0.2, 0.3, 1
+                foreground_color: 1, 1, 1, 1
+
+            Button:
+                text: 'Send'
+                size_hint: 0.2, 1
+                background_color: 0.3, 0.3, 0.5, 1
+                on_press: root.send_message(self)
+
+<Label>:
+    color: 1, 1, 1, 1  # Bone white text
+    font_size: dp(16)
+    halign: 'left'
+    valign: 'top'
+    text_size: self.width, None

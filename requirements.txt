@@ -1,0 +1,16 @@
+llama-cpp-python
+colorama
+textblob==0.17.1
+nltk==3.8.1
+
+# Entity-awareness pipeline (optional heavy deps)
+spacy>=3.5
+en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.5.0/en_core_web_trf-3.5.0-py3-none-any.whl
+transformers>=4.30
+torch>=1.13
+sentence-transformers>=2.2.2
+faiss-cpu>=1.7.4  # optional, remove if not using FAISS
+scikit-learn>=1.0
+tqdm
+requests
+openai>=0.27.0  # optional, remove or replace with your LLM client

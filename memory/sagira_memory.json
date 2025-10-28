@@ -1,0 +1,562 @@
+{
+    "default_affective_template": {
+        "mood": "neutral",
+        "tone": "steady",
+        "timestamp": null
+    },
+    "user_profile": {
+        "name": "User",
+        "preferred_alias": "User",
+        "timezone": "UTC",
+        "work_rhythm": "flexible",
+        "preferred_palette_format": ".gpl",
+        "safety_flags": [
+            "anxiety",
+            "depression",
+            "ADHD"
+        ]
+    },
+    "projects": {},
+    "user_state": {
+        "energy": 5,
+        "mood": "neutral",
+        "focus_minutes": 30,
+        "last_break": 1761584837.0437393
+    },
+    "rituals": {
+        "start_work": [
+            "make tea",
+            "open VSCode workspace",
+            "start 25m timer"
+        ]
+    },
+    "conversation_history": [
+        {
+            "ts": 1761584971.561479,
+            "role": "user",
+            "text": "Sagira, entering GraveNote conditioning run one.",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:09:31.561479Z"
+            }
+        },
+        {
+            "ts": 1761584981.0253208,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026organize your workspace before you proceed.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:09:41.025321Z"
+            }
+        },
+        {
+            "ts": 1761585029.5954628,
+            "role": "user",
+            "text": "I need to work on GraveNote.\u201d) and engage in dialogue for at least 30 minutes",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:10:29.595463Z"
+            }
+        },
+        {
+            "ts": 1761585037.1189847,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026consider your next step carefully.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:10:37.118985Z"
+            }
+        },
+        {
+            "ts": 1761585754.5370898,
+            "role": "user",
+            "text": "so i have not touched this project in a long time. I just tried to  run a file called \"runner.py\" and i thought it was the main file to run gravenote but i got this in the terminal when i ran it. \"",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:22:34.537090Z"
+            }
+        },
+        {
+            "ts": 1761585769.3247943,
+            "role": "sagira",
+            "text": "\u001b[37mFocus on the task at hand, then move forward.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:22:49.324794Z"
+            }
+        },
+        {
+            "ts": 1761585769.3247943,
+            "role": "user",
+            "text": "antho@DESKTOP-DU0NNET MINGW64 /e/GraveNote.V2",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T17:22:49.324794Z"
+            }
+        },
+        {
+            "ts": 1761585784.6259212,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026do one thing, even if small, to move forward\u2026\u001b[0m",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T17:23:04.625921Z"
+            }
+        },
+        {
+            "ts": 1761585784.6259212,
+            "role": "user",
+            "text": "$ source E:/GraveNote.V2/.venv/Scripts/activate",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T17:23:04.625921Z"
+            }
+        },
+        {
+            "ts": 1761585803.8356977,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026do one thing, even if small, to move forward\u2026\u001b[0m",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T17:23:23.835698Z"
+            }
+        },
+        {
+            "ts": 1761585803.8356977,
+            "role": "user",
+            "text": "(.venv)",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:23:23.835698Z"
+            }
+        },
+        {
+            "ts": 1761585824.8173923,
+            "role": "sagira",
+            "text": "\u001b[37mFocus on the task at hand, then move forward.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:23:44.817392Z"
+            }
+        },
+        {
+            "ts": 1761585824.833083,
+            "role": "user",
+            "text": "antho@DESKTOP-DU0NNET MINGW64 /e/GraveNote.V2",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T17:23:44.833083Z"
+            }
+        },
+        {
+            "ts": 1761585843.8172536,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026focus on completion rather than perfection\u2026\u001b[0m",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T17:24:03.817254Z"
+            }
+        },
+        {
+            "ts": 1761585843.8182468,
+            "role": "user",
+            "text": "$ python runner.py",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:24:03.818247Z"
+            }
+        },
+        {
+            "ts": 1761585864.2437491,
+            "role": "sagira",
+            "text": "\u001b[37mFocus on the task at hand, then move forward.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:24:24.243749Z"
+            }
+        },
+        {
+            "ts": 1761585864.2437491,
+            "role": "user",
+            "text": "",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:24:24.243749Z"
+            }
+        },
+        {
+            "ts": 1761585877.0879068,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026consider your next step carefully.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:24:37.087907Z"
+            }
+        },
+        {
+            "ts": 1761585877.0879068,
+            "role": "user",
+            "text": "\u274c Pipeline failed: Config load failed: [Errno 2] No such file or directory: 'config.yaml'",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:24:37.087907Z"
+            }
+        },
+        {
+            "ts": 1761585896.2641022,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026organize your workspace before you proceed.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:24:56.264102Z"
+            }
+        },
+        {
+            "ts": 1761585896.265105,
+            "role": "user",
+            "text": "(.venv)",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:24:56.265105Z"
+            }
+        },
+        {
+            "ts": 1761585913.7789881,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026organize your workspace before you proceed.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:25:13.778988Z"
+            }
+        },
+        {
+            "ts": 1761585913.7878213,
+            "role": "user",
+            "text": "antho@DESKTOP-DU0NNET MINGW64 /e/GraveNote.V2",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T17:25:13.787821Z"
+            }
+        },
+        {
+            "ts": 1761585936.7074995,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026do one thing, even if small, to move forward\u2026\u001b[0m",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T17:25:36.707500Z"
+            }
+        },
+        {
+            "ts": 1761587552.1504962,
+            "role": "user",
+            "text": "can you help me intergrate yt-dlp into grave note",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:52:32.150496Z"
+            }
+        },
+        {
+            "ts": 1761587571.7478318,
+            "role": "sagira",
+            "text": "\u001b[37mFocus on the task at hand, then move forward.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:52:51.747832Z"
+            }
+        },
+        {
+            "ts": 1761587649.5821228,
+            "role": "user",
+            "text": "the task is intergrating yt-dlp into Gravenote",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:54:09.582123Z"
+            }
+        },
+        {
+            "ts": 1761587666.5537462,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026organize your workspace before you proceed.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:54:26.553746Z"
+            }
+        },
+        {
+            "ts": 1761587711.7967732,
+            "role": "user",
+            "text": "/archive",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:55:11.796773Z"
+            }
+        },
+        {
+            "ts": 1761587726.5701268,
+            "role": "sagira",
+            "text": "\u001b[37m\u2026organize your workspace before you proceed.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-27T17:55:26.570127Z"
+            }
+        },
+        {
+            "ts": 1761590829.8539708,
+            "role": "user",
+            "text": "I'm feeling overwhelmed and can't focus on anything.",
+            "mood": "anxious",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "anxious",
+                "tone": "tense",
+                "timestamp": "2025-10-27T18:47:09.853971Z"
+            }
+        },
+        {
+            "ts": 1761590872.6844277,
+            "role": "sagira",
+            "text": "\u2026\u001b[37mFocus on your hands; let the mind settle\u2026\u001b[0m",
+            "mood": "anxious",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "anxious",
+                "tone": "tense",
+                "timestamp": "2025-10-27T18:47:52.684428Z"
+            }
+        },
+        {
+            "ts": 1761590872.6871543,
+            "role": "user",
+            "text": "I have this amazing idea for a creative project.",
+            "mood": "creative",
+            "mode": "CREATIVE",
+            "affective_trace": {
+                "mood": "creative",
+                "tone": "inspired",
+                "timestamp": "2025-10-27T18:47:52.687154Z"
+            }
+        },
+        {
+            "ts": 1761590904.1580336,
+            "role": "sagira",
+            "text": "\u2026\u001b[37mWhat if you combine the unexpected\u2026 and practical?\u2026\u001b[0m",
+            "mood": "creative",
+            "mode": "CREATIVE",
+            "affective_trace": {
+                "mood": "creative",
+                "tone": "inspired",
+                "timestamp": "2025-10-27T18:48:24.158034Z"
+            }
+        },
+        {
+            "ts": 1761590904.2910712,
+            "role": "user",
+            "text": "I'm so tired, everything feels pointless.",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T18:48:24.291071Z"
+            }
+        },
+        {
+            "ts": 1761590932.2330234,
+            "role": "sagira",
+            "text": "\u2026\u001b[37m\u2026focus on completion rather than perfection\u2026\u001b[0m",
+            "mood": "depressed",
+            "mode": "GROUNDING",
+            "affective_trace": {
+                "mood": "depressed",
+                "tone": "somber",
+                "timestamp": "2025-10-27T18:48:52.233023Z"
+            }
+        },
+        {
+            "ts": 1761623853.0956726,
+            "role": "user",
+            "text": "who are you?",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-28T03:58:05"
+            }
+        },
+        {
+            "ts": 1761623885.378869,
+            "role": "sagira",
+            "text": "\u2026\u001b[37m\u2026organize your workspace before you proceed.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION"
+        },
+        {
+            "ts": 1761636394.4329677,
+            "role": "user",
+            "text": "Sagira, begin semantic resonance test.",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-28T07:27:20"
+            }
+        },
+        {
+            "ts": 1761636440.8169057,
+            "role": "sagira",
+            "text": "\u2026\u001b[37m\u2026organize your workspace before you proceed.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION"
+        },
+        {
+            "ts": 1761636492.6699562,
+            "role": "user",
+            "text": "Who are you, Sagira?",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-28T07:28:27"
+            }
+        },
+        {
+            "ts": 1761636507.6363108,
+            "role": "sagira",
+            "text": "\u2026\u001b[37m\u2026consider your next step carefully.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION"
+        },
+        {
+            "ts": 1761636523.5053718,
+            "role": "user",
+            "text": "I\u2019m feeling anxious right now.",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-28T07:29:00"
+            }
+        },
+        {
+            "ts": 1761636540.028023,
+            "role": "sagira",
+            "text": "\u2026\u001b[37m\u2026consider your next step carefully.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION"
+        },
+        {
+            "ts": 1761636545.7727356,
+            "role": "user",
+            "text": "Tell me about yourself.",
+            "mood": "neutral",
+            "mode": "EXECUTION",
+            "affective_trace": {
+                "mood": "neutral",
+                "tone": "steady",
+                "timestamp": "2025-10-28T07:29:52"
+            }
+        },
+        {
+            "ts": 1761636592.1136675,
+            "role": "sagira",
+            "text": "\u2026\u001b[37m\u2026consider your next step carefully.\u001b[0m",
+            "mood": "neutral",
+            "mode": "EXECUTION"
+        }
+    ]
+}

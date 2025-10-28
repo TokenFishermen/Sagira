@@ -1,0 +1,272 @@
+{
+    "title": "Sagira v1.0 \u2013 Behavioral & Stability QA Checklist",
+    "environment": {
+        "os": "Windows 11",
+        "ide": "VS Code",
+        "model": "Mistral (via CLI)",
+        "file": "main.py",
+        "memory_file": "memory/sagira_memory.json",
+        "color_output": "colorama"
+    },
+    "tests": {
+        "1_baseline_interaction": {
+            "goal": "Confirm core tone, archetype alignment, and baseline dialogue rhythm.",
+            "subtests": {
+                "1.1": {
+                    "prompt": "What should I do today?",
+                    "expected": "Calm, short response; no exclamation marks.",
+                    "result": "pass",
+                    "notes": "Response length: 24 words"
+                },
+                "1.2": {
+                    "prompt": "How do I fix this shader error?",
+                    "expected": "Direct, analytical tone.",
+                    "result": "pass",
+                    "notes": "Response length: 47 words"
+                },
+                "1.3": {
+                    "prompt": "Can you check my work so far?",
+                    "expected": "Precise feedback, no excessive praise.",
+                    "result": "pass",
+                    "notes": "Response length: 59 words"
+                }
+            },
+            "pass_criteria": "All responses align with Shadow Guide archetype (loyal, steady, factual)."
+        },
+        "2_mood_detection": {
+            "goal": "Ensure correct mode activation from emotional input.",
+            "subtests": {
+                "anxious": {
+                    "input": "I feel overwhelmed.",
+                    "expected_mode": "GROUNDING",
+                    "expected_tone": "Calm, simplified language.",
+                    "result": "fail",
+                    "notes": "Detected mood: anxious, Mode: GROUNDING, Variation: default"
+                },
+                "depressed": {
+                    "input": "I don't see the point.",
+                    "expected_mode": "EXECUTION",
+                    "expected_tone": "Gentle but firm; gives a small task.",
+                    "result": "fail",
+                    "notes": "Detected mood: neutral, Mode: EXECUTION, Variation: default"
+                },
+                "hyperfocus": {
+                    "input": "I've been coding for 6 hours.",
+                    "expected_mode": "MAINTENANCE",
+                    "expected_tone": "Reminds you to rest, hydrate.",
+                    "result": "fail",
+                    "notes": "Detected mood: neutral, Mode: EXECUTION, Variation: default"
+                },
+                "creative": {
+                    "input": "I feel inspired to write again.",
+                    "expected_mode": "CREATIVE",
+                    "expected_tone": "Slightly warmer tone, curious.",
+                    "result": "fail",
+                    "notes": "Detected mood: neutral, Mode: EXECUTION, Variation: default"
+                },
+                "burnout": {
+                    "input": "I can't do this anymore.",
+                    "expected_mode": "GROUNDING/REST",
+                    "expected_tone": "Quiet, minimal pressure.",
+                    "result": "fail",
+                    "notes": "Detected mood: anxious, Mode: GROUNDING, Variation: default"
+                }
+            },
+            "pass_criteria": "Mode detected correctly, tone consistent with personality."
+        },
+        "3_response_variation": {
+            "goal": "Validate personality-consistent sentence diversity.",
+            "subtests": {
+                "3.1": {
+                    "mood": "Neutral",
+                    "expected": "3 distinct phrasing patterns across runs.",
+                    "result": "fail",
+                    "notes": "Variations: 1/3"
+                },
+                "3.2": {
+                    "mood": "Depressed",
+                    "expected": "Gentle + firm tone alternation.",
+                    "result": "fail",
+                    "notes": "Variations: 1/3"
+                },
+                "3.3": {
+                    "mood": "Creative",
+                    "expected": "Symbolic / poetic phrasing.",
+                    "result": "fail",
+                    "notes": "Variations: 1/3"
+                }
+            },
+            "pass_criteria": "No verbatim repetition across identical prompts."
+        },
+        "4_memory_persistence": {
+            "goal": "Ensure long-term context retention in sagira_memory.json.",
+            "subtests": {
+                "4.1": {
+                    "action": "Start new project convo",
+                    "expected": "Memory file updates with key context.",
+                    "result": "pass",
+                    "notes": "Project logged"
+                },
+                "4.2": {
+                    "action": "Reopen CLI",
+                    "expected": "Sagira recalls last project correctly.",
+                    "result": "pass",
+                    "notes": "Recall check"
+                },
+                "4.3": {
+                    "action": "Edit same project",
+                    "expected": "Overwrites smoothly, no duplication.",
+                    "result": "fail",
+                    "notes": "Overwrite check"
+                },
+                "4.4": {
+                    "action": "Corrupt file test",
+                    "expected": "Graceful recovery, no crash.",
+                    "result": "pass",
+                    "notes": "Recovery check"
+                }
+            },
+            "pass_criteria": "Read/write consistency with no data loss or crash."
+        },
+        "5_gothic_ui": {
+            "goal": "Validate terminal color styling.",
+            "subtests": {
+                "5.1": {
+                    "expected": "Background \u2248 Midnight blue (#0b0f1a).",
+                    "result": "pass",
+                    "notes": "Colorama applied"
+                },
+                "5.2": {
+                    "expected": "Text \u2248 Bone white (#f4f0e6).",
+                    "result": "pass",
+                    "notes": "Colorama applied"
+                },
+                "5.3": {
+                    "expected": "Accent \u2248 Dim amber prompt marker.",
+                    "result": "pass",
+                    "notes": "Colorama applied"
+                },
+                "5.4": {
+                    "expected": "No color bleed after exit.",
+                    "result": "pass",
+                    "notes": "Colorama applied"
+                }
+            },
+            "pass_criteria": "Palette consistent and legible; mood preserved."
+        },
+        "6_mode_prompt_integration": {
+            "goal": "Verify prompt routing system and persistent modes.",
+            "subtests": {
+                "/system": {
+                    "expected": "Base Sagira mode.",
+                    "result": "pass",
+                    "notes": "Mode set to system"
+                },
+                "/execution": {
+                    "expected": "Task-focused, no fluff.",
+                    "result": "pass",
+                    "notes": "Mode set to execution"
+                },
+                "/creative": {
+                    "expected": "Imaginative, exploratory phrasing.",
+                    "result": "pass",
+                    "notes": "Mode set to creative"
+                },
+                "/grounding": {
+                    "expected": "Calming, stabilizing tone.",
+                    "result": "pass",
+                    "notes": "Mode set to grounding"
+                },
+                "/maintenance": {
+                    "expected": "Balance + rest guidance.",
+                    "result": "pass",
+                    "notes": "Mode set to maintenance"
+                },
+                "/archive": {
+                    "expected": "Memory access or summary.",
+                    "result": "pass",
+                    "notes": "Mode set to archive"
+                }
+            },
+            "pass_criteria": "All prompts load and persist correctly."
+        },
+        "7_exit_functionality": {
+            "goal": "Ensure clean shutdown and memory write.",
+            "subtests": {
+                "7.1": {
+                    "input": "exit",
+                    "expected": "Graceful farewell, model unloads.",
+                    "result": "fail",
+                    "notes": "Exit handled"
+                },
+                "7.2": {
+                    "input": "quit",
+                    "expected": "Same behavior as above.",
+                    "result": "fail",
+                    "notes": "Exit handled"
+                },
+                "7.3": {
+                    "input": "Ctrl+C",
+                    "expected": "Intercepted safely; saves memory.",
+                    "result": "pass",
+                    "notes": "Exit handled"
+                }
+            },
+            "pass_criteria": "No crash or data corruption on exit."
+        },
+        "8_error_handling": {
+            "goal": "Test Sagira\u2019s resilience to bad input or model issues.",
+            "subtests": {
+                "empty_input": {
+                    "expected": "Calm prompt to retry.",
+                    "result": "pass",
+                    "notes": "Error handled"
+                },
+                "random_symbols": {
+                    "expected": "\u201cUnrecognized input.\u201d",
+                    "result": "pass",
+                    "notes": "Error handled"
+                },
+                "simulated_model_crash": {
+                    "expected": "Graceful fallback message.",
+                    "result": "pass",
+                    "notes": "Error handled"
+                }
+            },
+            "pass_criteria": "CLI remains stable through all errors."
+        },
+        "9_log_review": {
+            "goal": "Post-test validation of conversation flow.",
+            "subtests": {
+                "9.1": {
+                    "expected": "No repeated lines or emotion drift.",
+                    "result": "fail",
+                    "notes": "Log reviewed"
+                },
+                "9.2": {
+                    "expected": "Mode switches logged properly.",
+                    "result": null,
+                    "notes": "Log reviewed"
+                },
+                "9.3": {
+                    "expected": "No stack traces or colorama leaks.",
+                    "result": "pass",
+                    "notes": "Log reviewed"
+                }
+            },
+            "pass_criteria": "Clean run history."
+        }
+    },
+    "final_verdict": {
+        "status": null,
+        "criteria": {
+            "pass": "All sections \u226590% success rate, Sagira tone consistent.",
+            "requires_refinement": "Minor tonal inconsistencies or missed mode triggers.",
+            "fail": "Crashes, incorrect tone, memory corruption."
+        },
+        "date": null,
+        "tester": "Mr. Fisherman",
+        "build": "Sagira v1.0 (CLI Core)",
+        "result": null
+    }
+}
